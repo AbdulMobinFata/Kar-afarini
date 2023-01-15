@@ -75,29 +75,38 @@ body{
     border-bottom: 1px solid #b6b6b6;
 }
 
-.menu >.menu-item{
+.menu .menu-item{
     display: inline-block;
     vertical-align: top;
     margin: 15px;
     position: relative;
 }
 
-.menu .menu-item>a{
+.menu{
+    margin-bottom: 20px;
+}
+
+.menu-item>a{
     font-size: 1.6rem;
+    padding: 10px 0;
     padding: 0;
     margin: 0;
-    padding: 10px 0;
 }
 
 .sub-menu{
     position: absolute;
-    top: 120%;
+    top: 100%;
     left: 50%;
     visibility: hidden;
     opacity: 0;
     transform: translate(-50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    text-align: center;
+    width: 250px;
+}
+
+.sub-menu>li>a{
+    padding: 0;
+    margin: 0;
 }
 
 .menu>.menu-item:hover .sub-menu{
