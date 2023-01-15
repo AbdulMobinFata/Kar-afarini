@@ -133,8 +133,6 @@ body{
     margin: 20px;
 }
 
-.
-
 @media screen and (max-width: 1100px) {
     .navbar-2{
         display: none;
