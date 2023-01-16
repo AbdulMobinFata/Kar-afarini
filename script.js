@@ -1,3 +1,20 @@
+//Sidebar section
+
+const menuCloseBtn = document.querySelector(".x-icon");
+const menuOpenBtn = document.querySelector(".menu-icon");
+
+const navLinks = document.querySelector(".navbar-3-1");
+
+menuOpenBtn.addEventListener('click', () => {
+    navLinks.style.right = "0%";
+});
+
+menuCloseBtn.addEventListener('click', () => {
+    navLinks.style.right = "-100%";
+});
+
+// Slider section
+
 const slider = document.querySelector('.slider');
 
 const leftArrow = document.querySelector('.left');

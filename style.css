@@ -32,15 +32,24 @@ body{
 /* General content */
 
 #all-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
     width: 90%;
+    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 15px;
 }
 
 /* Header Section */
 
 .navbar-1{
-    height: 30px;
+    height: 40px;
     background-color: var(--color-primary);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.24);
 }
 
 .navbar-2{
@@ -66,6 +75,9 @@ body{
     height: 150px;
 }
 
+/* Navbar-3 */
+/* Navbar-3 for pc */
+
 .navbar-3{
     display: flex;
     justify-content: center;
@@ -79,6 +91,7 @@ body{
 .navbar-3 .menu-links{
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .navbar-3 .navbar-3-1 .nav-links .menu-links li{
@@ -101,11 +114,8 @@ body{
     transition: all .8s ease;
 }
 
-#edu-icon{
-}
-
 .navbar-3-1 .nav-links .menu-links>li{
-    padding-bottom: 20px;
+    padding-bottom: 22px;
 }
 
 .navbar-3-1 .nav-links .menu-links li:hover>a{
@@ -119,9 +129,10 @@ body{
 
 .navbar-3-1 .nav-links .menu-links .sub-menu{
     position: absolute;
-    top: 43px;
+    top: 40px;
     right: -15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    background-color: white;
     width:max-content;
     opacity: 0;
     visibility: hidden;
@@ -132,10 +143,109 @@ body{
     visibility: visible;
 }
 
-@media screen and (max-width: 1100px) {
-    .navbar-2{
+/* Navbar-3 for mobile */
+
+@media screen and (min-width: 1100px){
+    .mobile-nav-icons {
         display: none;
     }
+    .navbar-3 .x-icon,
+    .navbar-3 .menu-icon {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 1100px) {
+    .navbar-2 {
+        display: none;
+    }
+    .navbar-3 {
+        position: relative;
+        transition: all 0.5s ease;
+    }
+    .mobile-nav-icons{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        transform: translateY(-50%);
+    }
+    .mobile-nav-icons a i{
+        font-size: 2.5rem;
+        margin-right: 10px;
+        color: var(--color-primary);
+        text-shadow: .5px .5px .2px black;
+    }
+    .container{
+        overflow: hidden;
+    }
+    .navbar-3-1{
+        display: block;
+        position: absolute;
+        background: white;
+        top: 0%;
+        right: -100%;
+        width: 40%;
+        height: 100vh;
+    }
+
+    .navbar-3 .menu-links {
+        display: block;
+    }
+    .nav-links .menu-icon{
+        display: block;
+    }
+    .navbar-3 .menu-icon{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translateY(-50%);
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+        color: black;
+    }
+    .navbar-3 .x-icon{
+        display: block;
+        font-size: 3rem;
+        padding: 15px;
+        font-weight: 600;
+        color: black;
+    }
+    .navbar-3 .navbar-3-1 .nav-links .menu-links li{
+        display: block;
+        border-bottom: none;
+    }
+    .navbar-3-1 .nav-links .menu-links .sub-menu{
+        display: none;
+        position: relative;
+        top: 0;
+        right: 0;
+        box-shadow: none;
+    }
+    .navbar-3-1 .nav-links .menu-links .sub-menu li{
+        border-bottom: none;
+    }
+    
+    .navbar-3-1 .nav-links .menu-links li:hover .edu-sub-menu,
+    .navbar-3-1 .nav-links .menu-links li:hover .book-sub-menu,
+    .navbar-3-1 .nav-links .menu-links li:hover .design-sub-menu,
+    .navbar-3-1 .nav-links .menu-links li:hover .product-sub-menu,
+    .navbar-3-1 .nav-links .menu-links li:hover .market-sub-menu{
+        display: none;
+    }
+    .navbar-3-1 .nav-links .menu-links .menu-item{
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-3-1 .nav-links .menu-links li:hover .bx-chevron-down {
+        transform: rotate(0deg);
+        color: var(--color-primary);
+    }
+    
 }
 
 /* Hero Section */
@@ -145,6 +255,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 64vh;
+    background-image: url(/Images/hero.jpg);
+    background-size: contain;
+    background-position: center;
 }
 
 .hero-content>h1{
@@ -334,7 +447,7 @@ body{
 
 @media screen and (max-width: 900px) {
     .our-info{
-        height: 300vh;
+        height: 340vh;
     }
     .slider{
         display: flex;
@@ -411,11 +524,12 @@ body{
 @media screen and (max-width: 900px) {
     .our-books{
         display: flex;
+        justify-content: end;
         flex-direction: column;
-        height: 240vh;
+        height: 250vh;
     }
     .book-1{
-        margin-top: 80px;
+        
     }
     .book-1,.book-2,.book-3{
         margin-bottom: 40px;
@@ -424,6 +538,7 @@ body{
         text-shadow: 1px 1px .5px black;
         text-align: center;
         margin-bottom: 100px;
+        width: 50%;
     }
 }
 
@@ -431,7 +546,7 @@ body{
 /* Footer Section */
 
 .footer{
-    height: 52vh;
+    height: 45vh;
     border-top: 1px solid #b6b6b6;
     padding: 5% 10% 5% 5%;
 }
@@ -457,7 +572,7 @@ body{
 
 @media screen and (max-width: 900px){
     .footer {
-        height: 110vh;
+        height: 100vh;
         border-top: 1px solid #b6b6b6;
         padding: 5% 10% 5% 5%;
     }
@@ -478,7 +593,7 @@ body{
 
 @media screen and (max-width: 600px) {
     .footer {
-            height: 100vh;
+            height: 95vh;
             border-top: 1px solid #b6b6b6;
             padding: 5% 10% 5% 5%;
         }
@@ -500,3 +615,14 @@ body{
             padding-top: 7%;
         }
     }
+
+/* Copyright section */
+
+.copyright{
+    height: 40px;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+}
