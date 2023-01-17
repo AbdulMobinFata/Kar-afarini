@@ -294,7 +294,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 64vh;
-    background-image: url(/Images/hero.jpg);
+    background-image: url(Image/hero.jpg);
     background-size: contain;
     background-position: center;
 }
