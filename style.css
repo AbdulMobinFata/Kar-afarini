@@ -257,8 +257,15 @@ body{
         transform: rotate(0deg);
         color: var(--color-primary);
     }
-    .navbar-3-1 .nav-links .menu-links .menu-item.show1 .sub-menu{
+    .navbar-3-1 .nav-links .menu-links .menu-item .sub-menu.show1{
         display: block;
+    }
+    .navbar-3-1 .nav-links .menu-links li .sub-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    .navbar-3-1 .nav-links .menu-links .menu-item .sub-menu.show1 .bx-chevron-down{
+        transform: rotate(180deg);
     }
 }
 
