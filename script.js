@@ -49,42 +49,68 @@ leftArrow.addEventListener('click', function () {
 
 // Submenu of sidebar section
 
-const eduMenuItem = document.querySelector("#edu-menu-item");
-const eduSubMenu = document.querySelector("#edu-sub-menu");
+// const eduMenuItem = document.querySelector("#edu-menu-item");
+// const eduSubMenu = document.querySelector("#edu-sub-menu");
 
-const bookMenuItem = document.querySelector("#book-menu-item");
-const bookSubMenu = document.querySelector("#book-sub-menu");
+// const bookMenuItem = document.querySelector("#book-menu-item");
+// const bookSubMenu = document.querySelector("#book-sub-menu");
 
-const designMenuItem = document.querySelector("#design-menu-item");
-const designSubMenu = document.querySelector("#design-sub-menu");
+// const designMenuItem = document.querySelector("#design-menu-item");
+// const designSubMenu = document.querySelector("#design-sub-menu");
 
-const productMenuItem = document.querySelector("#product-menu-item");
-const productSubMenu = document.querySelector("#product-sub-menu");
+// const productMenuItem = document.querySelector("#product-menu-item");
+// const productSubMenu = document.querySelector("#product-sub-menu");
 
-const marketMenuItem = document.querySelector("#market-menu-item");
-const marketSubMenu = document.querySelector("#market-sub-menu");
+// const marketMenuItem = document.querySelector("#market-menu-item");
+// const marketSubMenu = document.querySelector("#market-sub-menu");
 
-const chevronDown = document.querySelectorAll(".bx-chevron-down")
+// const chevronDown = document.querySelectorAll(".bx-chevron-down")
 
-eduMenuItem.addEventListener('click', () => {
-    eduSubMenu.classList.toggle("show1"); 
+// eduMenuItem.addEventListener('click', () => {
+//     eduSubMenu.classList.toggle("show1"); 
+// });
+
+// bookMenuItem.addEventListener('click', () => {
+//     bookSubMenu.classList.toggle("show1"); 
+// });
+
+// designMenuItem.addEventListener('click', () => {
+//     designSubMenu.classList.toggle("show1"); 
+// });
+
+// productMenuItem.addEventListener('click', () => {
+//     productSubMenu.classList.toggle("show1"); 
+// });
+
+// marketMenuItem.addEventListener('click', () => {
+//     marketSubMenu.classList.toggle("show1");
+//     chevronDown.style.transform = 'rotate(180deg)';
+// });
+
+// Acordian dropdown menu section
+
+let orgMenus = document.querySelectorAll('.menu-item');
+let subMenu = document.querySelectorAll('.sub-menu');
+
+
+orgMenus.forEach(orgMenu => {
+    orgMenu.addEventListener('click', () => {
+        if (orgMenu.classList.contains('show1')) {
+            orgMenu.classList.remove('show1');
+        }
+        else {
+            orgMenus.forEach(orgMenuList => {
+                orgMenuList.classList.remove('show1');
+            })
+            orgMenu.classList.toggle('show1')
+        }
+    });
 });
 
-bookMenuItem.addEventListener('click', () => {
-    bookSubMenu.classList.toggle("show1"); 
-});
-
-designMenuItem.addEventListener('click', () => {
-    designSubMenu.classList.toggle("show1"); 
-});
-
-productMenuItem.addEventListener('click', () => {
-    productSubMenu.classList.toggle("show1"); 
-});
-
-marketMenuItem.addEventListener('click', () => {
-    marketSubMenu.classList.toggle("show1");
-    chevronDown.style.transform = 'rotate(180deg)';
-});
+// if (orgMenus.classList.contains('show1')) {
+//         subMenu.classList.add('show1');
+//     }
 
 
+
+ 

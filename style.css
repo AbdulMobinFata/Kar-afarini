@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html{
@@ -257,7 +258,7 @@ body{
         transform: rotate(0deg);
         color: var(--color-primary);
     }
-    .navbar-3-1 .nav-links .menu-links .menu-item .sub-menu.show1{
+    .navbar-3-1 .nav-links .menu-links .menu-item.show1 .sub-menu{
         display: block;
     }
     .navbar-3-1 .nav-links .menu-links li .sub-menu {
