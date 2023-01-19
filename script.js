@@ -67,19 +67,19 @@ leftArrow.addEventListener('click', function () {
 // const chevronDown = document.querySelectorAll(".bx-chevron-down")
 
 // eduMenuItem.addEventListener('click', () => {
-//     eduSubMenu.classList.toggle("show1"); 
+//     eduSubMenu.classList.toggle("show1");
 // });
 
 // bookMenuItem.addEventListener('click', () => {
-//     bookSubMenu.classList.toggle("show1"); 
+//     bookSubMenu.classList.toggle("show1");
 // });
 
 // designMenuItem.addEventListener('click', () => {
-//     designSubMenu.classList.toggle("show1"); 
+//     designSubMenu.classList.toggle("show1");
 // });
 
 // productMenuItem.addEventListener('click', () => {
-//     productSubMenu.classList.toggle("show1"); 
+//     productSubMenu.classList.toggle("show1");
 // });
 
 // marketMenuItem.addEventListener('click', () => {
@@ -91,7 +91,6 @@ leftArrow.addEventListener('click', function () {
 
 let orgMenus = document.querySelectorAll('.menu-item');
 let subMenu = document.querySelectorAll('.sub-menu');
-
 
 orgMenus.forEach(orgMenu => {
     orgMenu.addEventListener('click', () => {
