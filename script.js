@@ -107,10 +107,5 @@ orgMenus.forEach(orgMenu => {
     });
 });
 
-// if (orgMenus.classList.contains('show1')) {
-//         subMenu.classList.add('show1');
-//     }
-
-
 
  

@@ -265,7 +265,7 @@ body{
         opacity: 1;
         visibility: visible;
     }
-    .navbar-3-1 .nav-links .menu-links .menu-item .sub-menu.show1 .bx-chevron-down{
+    .navbar-3-1 .nav-links .menu-links .menu-item.show1 .sub-menu .bx-chevron-down{
         transform: rotate(180deg);
     }
 }
