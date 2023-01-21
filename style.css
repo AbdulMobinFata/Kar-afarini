@@ -299,6 +299,7 @@ body{
 .hero{
     height: 100vh;
     overflow: hidden;
+    
 }
 
 .hero-content{
@@ -309,6 +310,7 @@ body{
     background-image: url(Image/hero.jpg);
     background-size: cover;
     background-position: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
 }
 
 .hero-content>h1{
@@ -337,6 +339,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
 }
 
 .carousel{
@@ -552,6 +555,7 @@ body{
     grid-template-rows: .3fr 1fr;
     position: relative;
     padding: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
 }
 
 .book-div{
