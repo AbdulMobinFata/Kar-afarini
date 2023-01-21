@@ -333,7 +333,6 @@ body{
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid green;
     padding: 5%;
     display: flex;
     justify-content: center;
@@ -553,7 +552,6 @@ body{
     grid-template-rows: .3fr 1fr;
     position: relative;
     padding: 5%;
-    border: 1px solid red;
 }
 
 .book-div{
