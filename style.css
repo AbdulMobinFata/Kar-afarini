@@ -276,27 +276,38 @@ body{
     }
 }
 
-@media screen and (max-width: 525px) {
-    .navbar-3-1{
-        width: 50%;
+@media screen and (max-width: 768px) {
+    .navbar-3-1 {
+        width: 55%;
     }
 }
 
-@media screen and (max-width: 498px) {
+@media screen and (max-width: 600px) {
+    .navbar-3-1 {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .navbar-3-1{
-        width: 57%;
+        width: 100%;
     }
 }
 
 /* Hero Section */
 
+.hero{
+    height: 100vh;
+    overflow: hidden;
+}
+
 .hero-content{
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 64vh;
     background-image: url(Image/hero.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -305,13 +316,13 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
     .hero-content{
-        height: 86vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20%;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -320,25 +331,29 @@ body{
 .our-info{
     height: 100vh;
     width: 100%;
-    margin-bottom: 150px;
     position: relative;
     overflow: hidden;
+    border: 1px solid green;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel{
-    height: 100%;
+    height: 90vh;
     position: relative;
 }
 
 .slider{
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 90vh;
     width: 300%;
     transition: all 0.5s;
 }
 
-.slider section{
+.slider div{
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
@@ -476,51 +491,56 @@ body{
     background-color: var(--border-color);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 1024px) {
     .our-info{
         height: 110vh;
     }
-    .controls{
-        margin-top: 20%;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .our-info{
-        height: 340vh;
-    }
-    .slider{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
     .about-us{
-        width: 100%;
+        padding: 0;
+        margin: 0;
     }
-    .about-us>p{
-        margin-bottom: 15%;
-    }
-    .our-cus{
-        width: 100%;
-    }
-    .our-cus>p {
-        margin-bottom: 15%;
-    }
-    .our-goal{
-        width: 100%;
-        margin-bottom: 20%;
-    }
-    .our-goal>p{
-        margin-bottom: 20%;
-    }
-    .controls{
+    .controls>ul {
         display: none;
     }
 }
 
-@media screen and (max-width: 498px){
+@media screen and (max-width: 700px) {
     .our-info{
-        height: 420vh;
+        height: min-content;  
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .carousel{
+        height: 100%;
+        width: 100%;
+    }
+    .slider{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .about-us,
+    .our-cus,
+    .our-goal{
+        width: 100%;
+    }
+    .about-us>img{
+        margin-top: 50px;
+    }
+    .our-cus>img,
+    .our-goal>img{
+        margin-top: 100px;
+    }
+
+    .our-goal>p{
+        margin-bottom: 50px;
+    }
+    .controls{
+        display: none;
     }
 }
 
@@ -529,25 +549,27 @@ body{
 .our-books{
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0%;
+    display: grid;
+    grid-template-rows: .3fr 1fr;
     position: relative;
+    padding: 5%;
+    border: 1px solid red;
 }
 
-.book-1,
-.book-2,
-.book-3{
-    width: 250px;
-    height: 350px;
+.book-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+}
+
+.book-div .book-1,
+.book-div .book-2,
+.book-div .book-3{
+    width: 250px;
+    height: 350px;
     overflow: hidden;
-    flex-direction: column;
     border-radius: 15px;
-    margin-top: 30px;
 }
 
 .book-1>img,
@@ -560,19 +582,23 @@ body{
 .our-books-heading{
     font-size: 3rem;
     color: var(--color-primary);
-    position: absolute;
-    top: 0;
     text-shadow: 1px 1px .5px black;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .our-books{
         display: flex;
-        justify-content: end;
         flex-direction: column;
-        height: 250vh;
+        justify-content: center;
+        height: 220vh;
+        padding: 0;
+    }
+    .book-div{
+        display: flex;
+        flex-direction: column;
     }
     .book-1{
         
@@ -580,11 +606,17 @@ body{
     .book-1,.book-2,.book-3{
         margin-bottom: 40px;
     }
+    .book-heading-con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .our-books-heading{
         text-shadow: 1px 1px .5px black;
         text-align: center;
         margin-bottom: 100px;
-        width: 50%;
+        width: 80%;
+
     }
 }
 
@@ -592,7 +624,7 @@ body{
 /* Footer Section */
 
 .footer{
-    height: 40vh;
+    height: 35vh;
     border-top: 1px solid #b6b6b6;
     padding: 5% 10% 5% 5%;
 }
@@ -616,9 +648,10 @@ body{
     margin-left: 10px;
 }
 
+
 @media screen and (max-width: 900px){
     .footer {
-        height: 100vh;
+        height: 80vh;
         border-top: 1px solid #b6b6b6;
         padding: 5% 10% 5% 5%;
     }
@@ -637,30 +670,35 @@ body{
     }
 }
 
+@media screen and (max-width: 800px) {
+    .footer{
+        height: 77vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer{
+        height: 74vh;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .footer {
-            height: 95vh;
-            border-top: 1px solid #b6b6b6;
-            padding: 5% 10% 5% 5%;
+            height: 71vh;
         }
-    
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+            height: 68vh;
         }
-    
-        .contacts {
-            padding-top: 5%;
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+            height: 65vh;
         }
-    
-        .courses {
-            padding-top: 7%;
-        }
-    
-        .packages {
-            padding-top: 7%;
-        }
-    }
+}
 
 /* Copyright section */
 
